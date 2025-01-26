@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql:8.1
+    ports:
+      - "3307:3306"
+    restart: always
+    volumes:
+      - db_data:/var/lib/mysql 
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234 
+      MYSQL_DATABASE: tw_group 
+      MYSQL_USER: admin 
+      MYSQL_PASSWORD: 123456789 
+
+volumes:
+  db_data:
